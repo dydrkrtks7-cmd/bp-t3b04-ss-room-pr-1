@@ -1,214 +1,530 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수 룸싸롱 가격 - Brutalist Typography Price Guide & Bitcoin Genesis Block</title>
+    <meta name="description" content="상수 룸싸롱 가격의 모든 것! 투명한 블록체인급 정찰제 요금 매트릭스와 사토시 나카모토의 비트코인 제네시스 블록 영란은행 구제금융 썰 대방출.">
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #000000;
+            --brutalist-border: 4px solid #000000;
+            --brutalist-yellow: #ffff00;
+            --brutalist-blue: #0000ff;
+            --card-shadow: 8px 8px 0px #000000;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Arial Black', Impact, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        header {
+            background-color: var(--brutalist-yellow);
+            border-bottom: var(--brutalist-border);
+            padding: 60px 20px;
+            text-align: left;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            -webkit-text-stroke: 1px #000;
+        }
+        header p {
+            font-size: 1.5rem;
+            color: #000;
+            margin: 15px 0 0 0;
+            text-transform: uppercase;
+            background-color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            border: var(--brutalist-border);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .intro-box {
+            background-color: #ffffff;
+            border: var(--brutalist-border);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+        }
+        .intro-box h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            background-color: var(--brutalist-yellow);
+            display: inline-block;
+            padding: 5px 15px;
+            border: var(--brutalist-border);
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border: var(--brutalist-border);
+        }
+        .spec-table th, .spec-table td {
+            border: var(--brutalist-border);
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+        .spec-table th {
+            background-color: #000;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .spec-table td {
+            background-color: #fff;
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        @media(max-width: 768px) {
+            .post-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .post-card {
+            background-color: #ffffff;
+            border: var(--brutalist-border);
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.2s ease;
+        }
+        .post-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px #000000;
+        }
+        .post-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .post-card h3 a {
+            color: #000;
+            text-decoration: none;
+        }
+        .post-card h3 a:hover {
+            background-color: var(--brutalist-yellow);
+        }
+        .post-card p {
+            font-size: 0.95rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: normal;
+        }
+        .story-section {
+            background-color: #ffffff;
+            border: var(--brutalist-border);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+        }
+        .story-section h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+        .story-section p {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: normal;
+        }
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-section h2 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            border-bottom: var(--brutalist-border);
+            padding-bottom: 10px;
+        }
+        .review-card {
+            background-color: #ffffff;
+            border: var(--brutalist-border);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--card-shadow);
+        }
+        .review-card .meta {
+            font-size: 1rem;
+            background-color: var(--brutalist-yellow);
+            display: inline-block;
+            padding: 3px 10px;
+            border: var(--brutalist-border);
+            margin-bottom: 10px;
+        }
+        .review-card p {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: normal;
+            font-style: italic;
+        }
+        .cta-section {
+            border: var(--brutalist-border);
+            background-color: #000;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+        .cta-section h2 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: normal;
+            font-size: 1.2rem;
+        }
+        .btn-call {
+            display: inline-block;
+            background-color: var(--brutalist-yellow);
+            color: #000;
+            border: var(--brutalist-border);
+            padding: 15px 35px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 4px 4px 0px #ffffff;
+            text-transform: uppercase;
+        }
+        .btn-call:hover {
+            background-color: #fff;
+            box-shadow: 4px 4px 0px var(--brutalist-yellow);
+            transform: translate(-2px, -2px);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: var(--brutalist-border);
+            color: #000;
+            font-size: 1rem;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "상수 룸싸롱 가격",
+      "url": "https://t3b04-ss-room-pr-1.pages.dev",
+      "description": "브루탈리스트 타이포그래피 스타일과 상수 룸싸롱 가격 정찰제 아카이브.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://t3b04-ss-room-pr-1.pages.dev/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
+<header>
+    <h1>SS ROOM BRUTAL</h1>
+    <p>Bitcoin Consensus & Verified Price Database</p>
+</header>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
+<div class="container">
+    <div class="intro-box">
+        <h2>어이 브로, 상수 룸싸롱 가격 정보의 블록체인급 투명 실체다</h2>
+        <p>
+            다들 인터넷 삐끼 광고에 속아서 시가(?)라는 말도 안 되는 고무줄 가격표 보고 
+            현장 가마솥 눈탱이 맞았던 슬픈 흑역사들 많지? 
+            형은 진짜 상수동 최고급 핫플레이스들의 정직한 정찰제 가격 정보만 취급한다. 
+            거대하고 투박한 브루탈리스트 고대비 타이포그래피 밑에서, 
+            인류 역사상 가장 정직하고 투명한 <strong>상수 룸싸롱 가격</strong> 매트릭스를 대공개할게. 
+            내상이 두렵다면 아래 테이블에 명시된 블록체인급 정찰 가격 분기점을 머리에 팍 박고 입장해라 브로.
+        </p>
+        
+        <table class="spec-table">
+            <thead>
+                <tr>
+                    <th>스페셜 요금 룸 등급</th>
+                    <th>표준 정찰가 세트</th>
+                    <th>안주 및 서비스 스펙</th>
+                    <th>상수 핫플 검증 팁 (bro style)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>제네시스 로얄 룸 (Genesis Room)</td>
+                    <td>이벤트 할인가 적용 (합리적)</td>
+                    <td>12년산 양주 + 스페셜 안주 + 음료 세트</td>
+                    <td>합리적인 정찰제로 2차 비즈니스 접대 최고 존엄</td>
+                </tr>
+                <tr>
+                    <td>컨센서스 스탠다드 룸 (Consensus)</td>
+                    <td>쿠폰 적용 할인가</td>
+                    <td>국산 주류 + 가벼운 모듬 과일 안주</td>
+                    <td>번개 모임이나 주말 친목 도모 코스 안정성 100%</td>
+                </tr>
+                <tr>
+                    <td>가성비 마이너 룸 (Miner Room)</td>
+                    <td>초저가 타임 이벤트 세일</td>
+                    <td>소맥 콤보 세트 + 가벼운 마른 안주</td>
+                    <td>회식 마무리 깔끔하고 가성비 넘치게 놀기 최적</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+    <div class="story-section">
+        <h2>🪙 사토시 나카모토의 비트코인 제네시스 블록에 새겨진 영란은행 구제금융 메시지와 상수동 정찰제의 철학</h2>
+        <p>
+            자, 여기서 형이 인류 금융 역사를 바꾼 위대한 비하인드 스토리와 상수동 밤문화 철학을 결합한 개소름 돋는 썰 하나 풀어볼게. 
+            2009년 1월 3일, 역사상 최초의 블록체인 네트워크인 '비트코인(Bitcoin)'이 탄생하며 최초의 블록인 '제네시스 블록(Genesis Block)'이 채굴되었지. 
+            창시자 사토시 나카모토는 이 역사적인 첫 블록의 트랜잭션 16진수 소스코드 데이터 안에, 
+            당시 영국 더 타임스(The Times)의 헤드라인 뉴스를 영구적인 텍스트 메시지로 박아 넣었어. 
+            "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks" (영국 재무장관, 은행들을 위한 두 번째 구제금융 직전)
+        </p>
+        <p>
+            이 강렬한 메시지는 정부와 중앙은행이 무차별적으로 화폐를 찍어내어 금융 엘리트들을 구제하고 
+            시민들의 자산 가치를 훼손하는 중앙집권적 폭정에 대항하여, 
+            오직 수학적 알고리즘으로만 통제되는 투명하고 위조 불가능한 탈중앙화 금융 네트워크의 탄생을 선언한 역사적 철학이었지. 
+            형이 왜 <strong>상수 룸싸롱 가격</strong>을 설명하면서 이 거룩한 비트코인 제네시스 블록 썰을 꺼내느냐? 
+            중앙집권적 삐끼들의 고무줄 장난질과 깜깜이 요금 횡포에 맞서, 
+            오직 '투명한 정찰제 가격 정보'라는 수학적 신뢰 알고리즘으로만 굴러가는 탈중앙화 힐링 공간의 철학이 
+            사토시 나카모토의 블록체인 대의와 100% 기묘하게 동기화되어 일치하기 때문이야 브로!
+        </p>
+        <p>
+            상수동의 투명 정찰제 룸은 중앙의 양아치 요금 통제선 없이, 
+            오직 사전에 약속된 분기 요금표대로만 가격이 체인처럼 탄탄하게 연결되어 청구돼. 
+            위조 불가능한 장부처럼 정직한 상수동 최고의 룸에서 오늘 밤 너희들의 묵은 스트레스를 
+            블록체인급 무결성 신뢰로 완벽하게 힐링해버려라 브로!
+        </p>
+    </div>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+    <div class="review-section">
+        <h2>🔥 컨센서스 합의 로그 - 진짜 리얼 브로들의 상수동 정찰가 한줄 후기</h2>
+        
+        <div class="review-card">
+            <div class="meta">Log.Sender: 비트코인전도사 | 별점: ★★★★★</div>
+            <p>"상수 룸싸롱 가격 정찰제 정보 찾다가 사토시 제네시스 블록 썰 읽고 무릎을 탁 쳤다ㅋㅋㅋ 진짜 은행 폭정에 대항하는 탈중앙화 철학이 룸 가격 투명성이랑 묘하게 어울림. 예약 전화로 정확히 가격 검증하고 놀다 옴. 내상 0%!"</p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
+
+        <div class="review-card">
+            <div class="meta">Log.Sender: 블록체이너 | 별점: ★★★★★</div>
+            <p>"화면 디자인이 거대한 투박한 고대비 타이포그래피라 인디 매거진 표지 보는 거 같아서 존멋입니다. 삐끼들 꼼수 빌링에 맨날 당했는데 상수동은 진짜 이 정찰제 지식베이스가 유일한 합의 알고리즘임."</p>
+        </div>
+
+        <div class="review-card">
+            <div class="meta">Log.Sender: 마이너브로 | 별점: ★★★★☆</div>
+            <p>"주말에 회사 접대로 제네시스 룸 예약하고 들어갔는데 가격 추가 없이 계산서 깔끔하게 영수증 인쇄되어 나오는 거 보고 바이어들도 깜놀함. 정말 상수동 예약은 여기가 최고의 단일 진실 공급원입니다 브로!"</p>
+        </div>
+    </div>
+
+    <div class="post-list">
+        <div class="post-card">
+            <h3><a href="posts/review-001.html">상수 로얄 룸 실전 돌파기 - 내상 없는 정찰제 신화</a></h3>
+            <p>직접 주말 동창회 모임 2차로 사전 예약하고 투명 요금 스캔해서 완벽하게 대접받고 온 일기.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/review-002.html">상수역 일대 룸 가격 변동성 방어 및 정찰 요금제 분석</a></h3>
+            <p>시즌별/시간대별 깜깜이 추가 요금을 방지하기 위한 정밀 예약 요금 아카이브 가이드.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/guide-003.html">룸 입문자를 위한 안주 추가 및 서비스 요금 합의 가이드북</a></h3>
+            <p>첫 방문에 쫄지 않고 확실하게 베테랑 부장님들과 단골 우대 및 가격 협상을 합의하는 기술.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/guide-004.html">사토시 나카모토의 제네시스 블록에 새겨진 영란은행 구제금융 금융사</a></h3>
+            <p>중앙집권 금융 붕괴 역사의 서막과 비트코인 합의 알고리즘이 선사하는 무결성 신뢰 철학 리서치.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/compare-005.html">상수동 주요 룸싸롱 브랜드별 패키지 구성 및 연장 가격 정밀 비교</a></h3>
+            <p>양주 세트 안주 스펙 및 시간 연장 시 발생하는 가성비 손익분기점을 1대1로 대조 분석.</p>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>[Action] VIP 블록체인급 정찰 예약 & 내상 방지 문의</h2>
+        <p>어이 브로, 깜깜이 고무줄 요금에 자산 강탈당하며 내상 입지 마라.</p>
+        <p>아래 직통 다이얼로 즉시 통화 예약 시 골든타임 스페셜 추가 서비스 혜택 무상 제공!</p>
+        <a href="tel:010-6279-0862" class="btn-call">📞 [Call_Dial_Process(010-6279-0862)]</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수동 주요 룸싸롱 브랜드별 패키지 구성 및 연장 가격 정밀 비교 | 상수 룸싸롱 가격</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-    </footer>
+      <a href="posts/compare-005.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">룸싸롱 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목 **"월 매출 3000원 찍고도 6개월 만에 폐업한 진짜 원가 구조, 룸싸롱 가격대별 마진 분석!"** #### 소제목 1. **금전적 손실과 실패의 원인**2. **가격 결정과 원가 구조**3. **개선 방안과 전략** --- 아, 진짜..</p>
+      </div>
+      <a href="posts/guide-001-pjp989.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">룸 입문자를 위한 안주 추가 및 서비스 요금 합의 가이드북 | 상수 룸싸롱 가격</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/guide-003.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">사토시 나카모토의 제네시스 블록에 새겨진 영란은행 구제금융 금융사 | 상수 룸싸롱 가격</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/guide-004.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">상수 룸싸롱 가격 처음 알아볼 때 실제로 많이 묻는 질문 5가지</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목"사장 몰래 숨겨놓은 가격 계산법... 단골 손님의 선택 혼란" ## 포스트 메타정보 ### 상수 룸싸롱 가격 처음 알아볼 때 실제로 많이 묻는 질문 5가지1. **단골 손님의 시각에서 가장 중요한 요소는 무엇인가요?**2. **상품이나 서비스</p>
+      </div>
+      <a href="posts/qa-002-pjp989.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">홍대 상권의 암흑, 폐업 업소들의 공통된 원인과 살아남은 곳들의 차별화 전략</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">홍대 상권은 언제나 변화무쌍한 곳입니다. 새로운 업소들이 생겨나고, 기존 업소들이 사라지는 것이 常態입니다. 하지만, 이러한 변화 속에서 폐업 업소들과 살아남은 업소들을 비교해 보면, 몇 가지 공통된 원인과 차별화 전략이 존재합니다. ## 폐업 업소들의 공통된 원인먼저</p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-01">2026-06-01</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">월 3 천 찍고도 통장 잔고 0 원: 상수 룸싸롱 가격 뒤에 숨겨진 원가 폭탄 실체</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">형님, 잘 몰라서 그런데 혹시 '월 매출 3 천만 원'이면 룸 단위 서비스업에서 대박 난 줄 아세요? 저도 처음엔 그렇게 생각해서 간판 걸었다가 6 개월 만에 문 닫은 전적이 있습니다. 표면상 **상수 룸싸롱 가격**이 1 인당 15 만 원 선이라 계산기 두드리면 마진</p>
+      </div>
+      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">쯧쯧, 월 3천 벌고도 6개월컷? 홍대 짬뽕집 폐업 썰, 찐 원가 공개한다</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아이고, 뭘 또 이렇게 검색해보고 난리들이야. 잘 모르면 그냥 가만히나 있지. 홍대 상권? 내가 한때는 거기서 밥 좀 먹고살던 사람인데, 요즘 폐업하는 가게들 보면 딱 답이 나온다니까. 뭐, 통계니 뭐니 어려운 말 써가면서 분석하는 사람들도 있겠지만, 그런 거 다 뜬구</p>
+      </div>
+      <a href="posts/t3link-006.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+    <p>&copy; 2026 SS Room Brutal & Bitcoin Genesis Philosophy. All Rights Reserved.</p>
+    <p>Line: 010-6279-0862 | Secured by BPaaS Consensus Core</p>
+</footer>
+
 </body>
 </html>
