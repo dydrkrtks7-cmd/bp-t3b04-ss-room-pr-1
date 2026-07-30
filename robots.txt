@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://idae-hyperpublic-note.sangsu-hotplace-info.xyz/sitemap.xml
-Sitemap: https://idae-hyperpublic-note.sangsu-hotplace-info.xyz/sitemap-pages.xml
+Sitemap: https://sangsu-coin-song.link-hub.org/sitemap.xml
+Sitemap: https://sangsu-coin-song.link-hub.org/sitemap-pages.xml
