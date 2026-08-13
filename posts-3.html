@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (3/3) · t3b04-ss-room-pr-1</title>
+  <meta name="description" content="t3b04-ss-room-pr-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sangsu-coin-song.link-hub.org/posts-3.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --bg-color: #f0f0f0;
+ --text-color: #000000;
+ --brutalist-border: 4px solid #000000;
+ --brutalist-yellow: #ffff00;
+ --brutalist-blue: #0000ff;
+ --card-shadow: 8px 8px 0px #000000;
+ }
+ body {
+ background-color: var(--bg-color);
+ color: var(--text-color);
+ font-family: 'Arial Black', Impact, sans-serif;
+ margin: 0;
+ padding: 0;
+ line-height: 1.5;
+ }
+ header {
+ background-color: var(--brutalist-yellow);
+ border-bottom: var(--brutalist-border);
+ padding: 60px 20px;
+ text-align: left;
+ }
+ header h1 {
+ font-size: 4rem;
+ margin: 0;
+ text-transform: uppercase;
+ letter-spacing: -2px;
+ -webkit-text-stroke: 1px #000;
+ }
+ header p {
+ font-size: 1.5rem;
+ color: #000;
+ margin: 15px 0 0 0;
+ text-transform: uppercase;
+ background-color: #fff;
+ display: inline-block;
+ padding: 5px 15px;
+ border: var(--brutalist-border);
+ }
+ .container {
+ max-width: 1000px;
+ margin: 40px auto;
+ padding: 0 20px;
+ }
+ .intro-box {
+ background-color: #ffffff;
+ border: var(--brutalist-border);
+ padding: 30px;
+ margin-bottom: 40px;
+ box-shadow: var(--card-shadow);
+ }
+ .intro-box h2 {
+ font-size: 2.2rem;
+ margin-top: 0;
+ text-transform: uppercase;
+ background-color: var(--brutalist-yellow);
+ display: inline-block;
+ padding: 5px 15px;
+ border: var(--brutalist-border);
+ }
+ .spec-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 25px 0;
+ border: var(--brutalist-border);
+ }
+ .spec-table th, .spec-table td {
+ border: var(--brutalist-border);
+ padding: 15px;
+ font-size: 1.1rem;
+ }
+ .spec-table th {
+ background-color: #000;
+ color: #fff;
+ text-transform: uppercase;
+ }
+ .spec-table td {
+ background-color: #fff;
+ }
+ .post-list {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 30px;
+ margin-bottom: 40px;
+ }
+ @media(max-width: 768px) {
+ .post-list {
+ grid-template-columns: 1fr;
+ }
+ }
+ .post-card {
+ background-color: #ffffff;
+ border: var(--brutalist-border);
+ padding: 25px;
+ box-shadow: var(--card-shadow);
+ transition: all 0.2s ease;
+ }
+ .post-card:hover {
+ transform: translate(-4px, -4px);
+ box-shadow: 12px 12px 0px #000000;
+ }
+ .post-card h3 {
+ margin-top: 0;
+ font-size: 1.5rem;
+ text-transform: uppercase;
+ }
+ .post-card h3 a {
+ color: #000;
+ text-decoration: none;
+ }
+ .post-card h3 a:hover {
+ background-color: var(--brutalist-yellow);
+ }
+ .post-card p {
+ font-size: 0.95rem;
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ font-weight: normal;
+ }
+ .story-section {
+ background-color: #ffffff;
+ border: var(--brutalist-border);
+ padding: 30px;
+ margin-bottom: 40px;
+ box-shadow: var(--card-shadow);
+ }
+ .story-section h2 {
+ font-size: 2.2rem;
+ margin-top: 0;
+ text-transform: uppercase;
+ background-color: #000;
+ color: #fff;
+ display: inline-block;
+ padding: 5px 15px;
+ }
+ .story-section p {
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ font-weight: normal;
+ }
+ .review-section {
+ margin-bottom: 40px;
+ }
+ .review-section h2 {
+ font-size: 2.2rem;
+ text-transform: uppercase;
+ border-bottom: var(--brutalist-border);
+ padding-bottom: 10px;
+ }
+ .review-card {
+ background-color: #ffffff;
+ border: var(--brutalist-border);
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: var(--card-shadow);
+ }
+ .review-card .meta {
+ font-size: 1rem;
+ background-color: var(--brutalist-yellow);
+ display: inline-block;
+ padding: 3px 10px;
+ border: var(--brutalist-border);
+ margin-bottom: 10px;
+ }
+ .review-card p {
+ margin: 0;
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ font-weight: normal;
+ font-style: italic;
+ }
+ .cta-section {
+ border: var(--brutalist-border);
+ background-color: #000;
+ color: #fff;
+ padding: 40px;
+ text-align: center;
+ box-shadow: var(--card-shadow);
+ }
+ .cta-section h2 {
+ margin-top: 0;
+ font-size: 2.5rem;
+ text-transform: uppercase;
+ }
+ .cta-section p {
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ font-weight: normal;
+ font-size: 1.2rem;
+ }
+ .btn-call {
+ display: inline-block;
+ background-color: var(--brutalist-yellow);
+ color: #000;
+ border: var(--brutalist-border);
+ padding: 15px 35px;
+ font-size: 1.5rem;
+ font-weight: bold;
+ text-decoration: none;
+ margin-top: 20px;
+ box-shadow: 4px 4px 0px #ffffff;
+ text-transform: uppercase;
+ }
+ .btn-call:hover {
+ background-color: #fff;
+ box-shadow: 4px 4px 0px var(--brutalist-yellow);
+ transform: translate(-2px, -2px);
+ }
+ footer {
+ text-align: center;
+ padding: 40px 20px;
+ border-top: var(--brutalist-border);
+ color: #000;
+ font-size: 1rem;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (3/3) · t3b04-ss-room-pr-1">
+  <meta property="og:description" content="t3b04-ss-room-pr-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sangsu-coin-song.link-hub.org/posts-3.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <h1>SS ROOM BRUTAL</h1>
+ <p>Bitcoin Consensus & Verified Price Database</p>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 44개 · 3/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-pjp989.html">상수 룸싸롱 가격 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">상수 지역에서 유흥 공간을 처음 알아보시는 분들은 비용에 대해 막연한 불안감을 느끼는 경우가 많습니다. 특히 정찰제로 운영되는 곳과 그렇지 않은 곳의 차이를 구분하기 어려워 상담을 요청하는 사례가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001.html">홍대 상권의 암흑, 폐업 업소들의 공통된 원인과 살아남은 곳들의 차별화 전략</a>
+        <p class="post-item__summary">홍대 상권은 언제나 변화무쌍한 곳입니다. 새로운 업소들이 생겨나고, 기존 업소들이 사라지는 것이 일상입니다. 하지만, 이러한 변화 속에서 폐업 업소들과 살아남은 업소들을 비교해 보면, 몇 가지 공통</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002.html">월 3 천 찍고도 통장 잔고 0 원: 상수 룸싸롱 가격 뒤에 숨겨진 원가 폭탄 실체</a>
+        <p class="post-item__summary">형님, 잘 몰라서 그런데 혹시 '월 매출 3 천만 원'이면 룸 단위 서비스업에서 대박 난 줄 아세요? 저도 처음엔 그렇게 생각해서 간판 걸었다가 6 개월 만에 문 닫은 전적이 있습니다. 표면상 상수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-006.html">쯧쯧, 월 3천 벌고도 6개월컷? 홍대 짬뽕집 폐업 썰, 찐 원가 공개한다</a>
+        <p class="post-item__summary">솔직히 말해, 월 매출 3천 정도 찍으면 ‘와, 대박!’ 싶겠지만, 그거 순전히 매출일 뿐이야. 거기서 떼고 나면 뭐가 남겠냐고. 내가 예전에 했던 그 짬뽕집만 해도 그래. 겉보기엔 장사 잘되는 것</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <span class="pager__current">3</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
